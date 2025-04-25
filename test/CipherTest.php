@@ -2,9 +2,15 @@
 
 namespace ChaCha20;
 
-class CipherTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
+
+class CipherTest extends TestCase
 {
-    function vectors()
+    /**
+     * @return array<int, array<int, string|int>>
+     */
+    public static function vectors(): array
     {
         return [
             //2.4.2
@@ -43,10 +49,8 @@ class CipherTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-    /**
-     * @dataProvider vectors
-     */
-    function testVectors(string $key, string $nonce, int $counter, string $plaintext, string $ciphertext)
+    #[DataProvider('vectors')]
+    public function testVectors(string $key, string $nonce, int $counter, string $plaintext, string $ciphertext): void
     {
         $cipher = new Cipher;
         $ctx = $cipher->init(hex2bin($key), hex2bin($nonce));
