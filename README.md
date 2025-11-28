@@ -1,5 +1,5 @@
 [![CI](https://github.com/dsbaars/PHP-ChaCha20/actions/workflows/ci.yml/badge.svg)](https://github.com/dsbaars/PHP-ChaCha20/actions/workflows/ci.yml)
-![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/swentel/dsbaars/chacha20)
+![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/dsbaars/PHP-ChaCha20/php)
 
 
 ChaCha20 in PHP
