@@ -1,6 +1,6 @@
 {
-  "name": "leigh/chacha20",
-  "homepage": "https://github.com/lt/PHP-ChaCha20",
+  "name": "dsbaars/chacha20",
+  "homepage": "https://github.com/dsbaars/PHP-ChaCha20",
   "description": "Pure PHP implementation of the ChaCha20 encryption algorithm.",
   "authors": [
     {

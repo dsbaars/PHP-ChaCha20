@@ -1,5 +1,9 @@
+[![CI](https://github.com/dsbaars/PHP-ChaCha20/actions/workflows/ci.yml/badge.svg)](https://github.com/dsbaars/PHP-ChaCha20/actions/workflows/ci.yml)
+
 ChaCha20 in PHP
 ===============
+
+Fork of [composer require leigh/chacha20](https://github.com/lt/PHP-ChaCha20)
 
 This library contains a pure PHP implementation of the ChaCha20 encryption algorithm.
 
