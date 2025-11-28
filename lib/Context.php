@@ -4,6 +4,6 @@ namespace ChaCha20;
 
 class Context
 {
-    public $state;
-    public $buffer = '';
+    public mixed $state;
+    public string $buffer = '';
 }

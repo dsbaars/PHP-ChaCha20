@@ -15,7 +15,14 @@ class Cipher
         }
 
         $ctx = new Context();
-        $ctx->state = array_values(unpack('V16', "expand 32-byte k$key\0\0\0\0$nonce"));
+
+        $unpacked = unpack('V16', "expand 32-byte k$key\0\0\0\0$nonce");
+
+        if ($unpacked === false) {
+            throw new \RuntimeException('Failed to unpack state');
+        }
+
+        $ctx->state = array_values($unpacked);
 
         return $ctx;
     }
@@ -134,7 +141,7 @@ class Cipher
         return $this->encrypt($ctx, $message);
     }
 
-    public function setCounter(Context $ctx, int $counter)
+    public function setCounter(Context $ctx, int $counter): void
     {
         if ($counter < 0 || $counter > 0xffffffff) {
             throw new \InvalidArgumentException('Counter must be 32-bit positive integer');
